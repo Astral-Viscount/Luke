@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PrefectConnect</title>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+
+<h1>PrefectConnect</h1>
+
+{% if user %}
+    <h3>Welcome {{ user["name"] }}</h3>
+    <img src="{{ user.picture }}" width="100"><br><br>
+    <a href="/logout">Logout</a>
+{% else %}
+    <div id="g_id_onload"
+         data-client_id="374196189415-8ntsa59fg1svdt1nclv13m8bvitt65pf.apps.googleusercontent.com"
+         data-callback="handleCredentialResponse">
+    </div>
+
+    <div class="g_id_signin"
+         data-type="standard">
+    </div>
+{% endif %}
+
+<script src="/static/script.js"></script>
+
+</body>
+</html>
