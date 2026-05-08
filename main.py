@@ -13,7 +13,7 @@ def get_db():
 app = Flask(__name__)
 app.secret_key = "super_secret_key"  # change this later
 
-GOOGLE_CLIENT_ID = "374196189415-8ntsa59fg1svdt1nclv13m8bvitt65pf.apps.googleusercontent.com"
+GOOGLE_CLIENT_ID = "your_google_client_id"
 
 @app.route("/")
 def index():
